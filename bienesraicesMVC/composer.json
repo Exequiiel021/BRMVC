@@ -1,0 +1,21 @@
+{
+    "name": "exe/bienesraices24",
+    "description": "Creando un Proyecto con POO",
+    "authors": [
+        {
+            "name": "Exequiel Dominguez",
+            "email": "100177104+Exequiiel021@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "intervention/image": "^3.6",
+        "phpmailer/phpmailer": "^6.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "Model\\" : "./models",
+            "MVC\\" : "./",
+            "Controllers\\" : "./controllers"
+        }
+    }
+}

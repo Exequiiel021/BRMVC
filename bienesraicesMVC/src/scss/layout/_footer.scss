@@ -1,0 +1,21 @@
+.footer{
+    padding: $separacion / 2;
+    background-color: $grisOscuro;
+    margin-bottom: 0; /*quitar el margin que le da el seccion al footer*/
+
+    .contenido-footer{
+        padding: $separacion / 2;    
+    }
+
+    .navegacion{
+        visibility: visible;
+        opacity: 1;
+        height: auto; /*arreglar espacio que genera la nav cuando se aculta, en este caso para que el footer no queda mal cuando la altura es 0*/
+    }
+
+    .copyright{
+    text-align: center;
+    color: $blanco;
+}
+}
+

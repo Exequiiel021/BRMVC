@@ -1,0 +1,86 @@
+.derecha{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include tablet {
+        align-items: flex-end;
+    }
+
+    .dark-mode-boton{
+        width: 3rem;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+        filter: invert(100%);
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
+
+.barra{
+    display: flex;
+    flex-direction: column;
+    padding-top: 3rem;
+    align-items: center;
+
+    @include tablet{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+}
+
+.navegacion{
+
+    visibility: hidden;
+    opacity: 0;
+    height: 0; /* 1** arreglar espacio que genera la nav cuando se aculta*/
+    transition: visibility 0.3s ease-in-out, opacity 0.5s linear;
+    /*display: none; 1* esta forma funciona pero no se puede animar */
+
+    @include tablet{
+        display: flex;
+        align-items: center;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    a{
+        color: $blanco;
+        text-decoration: none;
+        font-size: 2.2rem;
+        display: block;
+        text-align: center;
+
+        @include tablet{
+            margin-right: 2rem;
+            font-size: 1.8rem;
+
+            &:last-of-type{ /*elimina el margin del ultimo elemento*/
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+
+/*menu hamburguesa*/
+
+.mobile-menu{
+    @include tablet{
+        display: none;
+    }
+
+    img{
+        width: 5rem;
+    }
+}
+
+.mostrar{
+    visibility: visible;
+    opacity: 1;
+    /*display: block; 2* para reescribir el display none de antes*/
+    height: auto; /* 2** arreglar espacio que genera la nav cuando se aculta*/
+}
